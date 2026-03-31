@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JansenXstore — Secure Payment Gateway</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== PARTICLE DOTS ===== -->
+<div class="particles" id="particles"></div>
+
+<!-- ===== MAIN CONTENT ===== -->
+<div class="page-wrapper">
+  <div class="card">
+
+    <!-- HEADER -->
+    <div class="header s1">
+      <!-- Holographic Hexagon Logo -->
+      <div class="logo-wrap">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="32,4 56,18 56,46 32,60 8,46 8,18"
+            fill="none" stroke="#00f5ff" stroke-width="1.5" opacity="0.9"/>
+          <polygon points="32,10 50,21 50,43 32,54 14,43 14,21"
+            fill="none" stroke="#9d00ff" stroke-width="1" opacity="0.5"/>
+          <!-- Lightning bolt -->
+          <path d="M36 14 L27 33 L34 33 L28 50 L39 28 L32 28 Z"
+            fill="#00f5ff" opacity="0.95"/>
+          <!-- Center glow dot -->
+          <circle cx="32" cy="32" r="2" fill="#ffd700" opacity="0.8"/>
+        </svg>
+      </div>
+
+      <div class="title" data-text="SECURE PAYMENT GATEWAY">SECURE PAYMENT GATEWAY</div>
+      <div class="subtitle">Next-Gen Transaction System v2.0</div>
+    </div>
+
+    <!-- AMOUNT -->
+    <div class="divider s2"></div>
+    <div class="amount-section s2">
+      <div class="amount-label">Berapapun yang kamu berikan asalkamu ikhlas insya allah yg kamu berikan hari ini akan di lipat gandakan, amin</div>
+      <div class="amount-value" id="amount-display"></div>
+    </div>
+    <div class="divider s2"></div>
+
+    <!-- QR CODE -->
+    <div class="qr-section s3">
+      <div class="scan-label">▶ Scan untuk traktir saya ◀</div>
+
+      <div class="qr-outer">
+        <!-- Spinning gradient ring -->
+        <div class="qr-ring"></div>
+        <div class="qr-ring-mask"></div>
+
+        <!-- HUD corner brackets -->
+        <div class="qr-corner tl"></div>
+        <div class="qr-corner tr"></div>
+        <div class="qr-corner bl"></div>
+        <div class="qr-corner br"></div>
+
+        <!-- QR Image + scanline -->
+        <div class="qr-img-wrap">
+          <img
+            class="qr-img"
+            src="https://i.ibb.co.com/DfWyv8Pw/WA-1774980297721.jpg"
+            alt="QR Code Pembayaran"
+            loading="eager"
+          />
+          <div class="qr-scanline"></div>
+        </div>
+      </div>
+
+      <div class="invoice-code">INV-2026-001</div>
+    </div>
+
+    <!-- PAYMENT INFO -->
+    <div class="info-section s4">
+      <div class="info-row">
+        <span class="info-key">Merchant</span>
+        <span class="info-val merchant-name">
+          <span class="verified-icon">
+            <svg viewBox="0 0 10 10" fill="none">
+              <path d="M2 5l2.5 2.5L8 3" stroke="#0a0a0f" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </span>
+          Tractir me a cofe
+        </span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">Expired</span>
+        <span class="info-val">
+          <span class="timer" id="countdown">2030</span>
+        </span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">Status</span>
+        <span class="info-val">
+          <span class="status-badge">
+            <span class="status-dot"></span>
+            Awaiting Payment
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="btn-group s5">
+      <button class="btn btn-primary" id="btn-confirm">
+        
+      </button>
+      <button class="btn btn-secondary" id="btn-cancel">
+        
+      </button>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer s6">
+      <div class="payment-methods">
+        <span class="method-badge">QRIS</span>
+        <span class="method-badge">GoPay</span>
+        <span class="method-badge">OVO</span>
+        <span class="method-badge">DANA</span>
+      </div>
+      <div class="footer-text">
+        <span class="lock-icon">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <rect x="2" y="5" width="8" height="6" rx="1.5" fill="#00f5ff" opacity="0.8"/>
+            <path d="M4 5V3.5a2 2 0 114 0V5" stroke="#00f5ff" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          </svg>
+        </span>
+        256-bit Encrypted · PCI DSS Compliant 
+      </div>
+    </div>
+
+  </div><!-- /card -->
+</div><!-- /page-wrapper -->
+
+<script src="script.js"></script>
+</body>
+</html>
